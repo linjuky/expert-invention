@@ -1,0 +1,30 @@
+import java.util.*;
+public class student {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input = new Scanner(System.in);
+int[] a=new int[10];
+int[] b=new int[10];
+int number=1;
+System.out.print("Enter 10 numbers: ");
+for(int i =0;i<10;i++){
+	a[i]=input.nextInt();
+}
+b[0]=a[0];
+for(int i=1;i<10;i++){
+	for(int j=0;j<number;j++){
+		if(a[i]==b[j])
+			break;
+		if(j==number-1){
+			b[number]=a[i];
+			number++;
+		}
+	}
+}
+System.out.println("The number of distinct numbers is "+number);
+System.out.print("The distinct numbers are: ");
+for(int i=0;i<b.length;i++)
+	if(b[i]!=0)
+	System.out.print(b[i]+" ");
+}
+}
