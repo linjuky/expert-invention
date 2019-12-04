@@ -1,0 +1,39 @@
+package work;
+import java.util.*;
+public class Text2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input = new Scanner(System.in);
+System.out.println("Number");
+int number = input.nextInt();
+String[] name=new String[number];
+int[] score = new int[number];
+System.out.println("name and score");
+
+for(int i=0;i<number;i++) {
+name[i]=input.next();
+score[i]=input.nextInt();
+}
+int key=0,temp1;
+String temp2;
+for(int i=0;i<number;i++ ) {
+	key=i;
+	for(int j=i+1;j<number;j++) { //选择排序
+		if(score[j]>score[key])
+		key=j;
+	}
+	temp1=score[i];   
+	score[i]=score[key];
+	score[key]=temp1;
+	
+	temp2=name[i];
+	name[i]=name[key];
+	name[key]=temp2;     //交换name与score
+}
+for(int i=0;i<number;i++) {
+	System.out.println(name[i]+" "+score[i]);
+}
+	}
+
+}
