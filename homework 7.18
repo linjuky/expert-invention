@@ -1,0 +1,29 @@
+package work2;
+import java.util.*;
+public class Text {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner input =new Scanner(System.in);
+System.out.println("Enter 10 double");
+double[] a = new double[10];
+for(int i=0;i<10;i++) {
+	a[i]=input.nextDouble();
+}
+double temp;
+for(int i=0;i<9;i++) {  //冒泡
+	for(int j=9;j>i;j--) {
+		if(a[j]<a[j-1])
+		{
+        temp=a[j];
+        a[j]=a[j-1];
+        a[j-1]=temp;
+		}
+	}
+}
+for(int i=0;i<10;i++) {
+	System.out.print(a[i]+" ");
+}
+	}
+	
+}
